@@ -3,13 +3,11 @@ document.querySelector('form').addEventListener('submit', function (e) {
 
     // Input values
     const name = document.querySelector('.c-name').value.trim();
-    const phone = document.querySelector('.c-phone').value.trim();
     const email = document.querySelector('.c-email').value.trim();
     const message = document.querySelector('.c-message').value.trim();
 
     // Error message elements
     const messageName = document.querySelector('.f-name');
-    const messagePhone = document.querySelector('.f-phone');
     const messageEmail = document.querySelector('.f-email');
 
     let isValid = true; // Assume the form is valid
