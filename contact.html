@@ -101,20 +101,17 @@
                     </div>
                     <div class="col-1">
                         <div class="contact-form">
-                            <form action="#">
-                                <input type="text" class="contact-input c-name" 
-                                placeholder="Name (*)" required="">
+                            <form action="process_form.php" method="POST">
+                                <input type="text" class="contact-input c-name" name="name" placeholder="Name (*)" required>
                                 <div class="invalid-feedback f-name">*Please, enter your name</div>
-                                <input type="text" class="contact-input c-phone" placeholder="Phone (*) : 0999999999" required="">
-                                <div class="invalid-feedback f-phone">*Please, your phone number</div>
-                                <input type="text" class="contact-input c-email" placeholder="E-mail (*)" required="">
+                                <input type="text" class="contact-input c-phone" name="phone" placeholder="Phone (*)" required>
+                                <div class="invalid-feedback f-phone">*Please, enter your phone number</div>
+                                <input type="email" class="contact-input c-email" name="email" placeholder="E-mail (*)" required>
                                 <div class="invalid-feedback f-email">*Please, enter your E-mail</div>
-                                <input type="text" class="contact-input c-message" placeholder="Message" required="">
-                                <input type="button" class="send-btn" value="Send message"> 
-                                <div class="submit-feedback">Thank you for your message! We will contact you soon!</div>
+                                <textarea class="contact-input c-message" name="message" placeholder="Message (*)" required></textarea>
+                                <input type="submit" class="send-btn" value="Send Message">
                             </form>
-                        </div>
-                    </div>
+                            
                    
                 </div>
             </div>
@@ -199,6 +196,8 @@
                 
             </div>
         </footer>
+        <script src="script.js" defer></script> <!-- Link your JavaScript file -->
+
         </body>
         </html>
         
