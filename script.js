@@ -12,22 +12,20 @@ document.querySelector('form').addEventListener('submit', function (e) {
     const messagePhone = document.querySelector('.f-phone');
     const messageEmail = document.querySelector('.f-email');
 
-    // Validation Functions
-    const isEmail = (mail) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(mail); // Basic email format
-    const isName = (name) => /^[a-zA-Z\s]+$/.test(name); // Matches letters and spaces
-
-    let isValid = true;
+    let isValid = true; // Assume the form is valid
 
     // Name Validation
-    if (!isName(name)) {
+    if (!name) {
+        messageName.textContent = '*Please, enter your name';
         messageName.style.display = 'block';
         isValid = false;
     } else {
         messageName.style.display = 'none';
     }
 
-    // Phone Validation (No restrictions)
-    if (!phone) { // Only check if the phone field is empty
+    // Phone Validation (Only checks if empty)
+    if (!phone) {
+        messagePhone.textContent = '*Please enter your phone number';
         messagePhone.style.display = 'block';
         isValid = false;
     } else {
@@ -35,7 +33,9 @@ document.querySelector('form').addEventListener('submit', function (e) {
     }
 
     // Email Validation
-    if (!isEmail(email)) {
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailPattern.test(email)) {
+        messageEmail.textContent = '*Please enter a valid email address';
         messageEmail.style.display = 'block';
         isValid = false;
     } else {
