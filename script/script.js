@@ -1,6 +1,4 @@
-
 console.log("JavaScript file loaded");
-
 
 document.querySelector('form').addEventListener('submit', function (e) {
     e.preventDefault();
@@ -23,15 +21,6 @@ document.querySelector('form').addEventListener('submit', function (e) {
         isValid = false;
     } else {
         messageName.style.display = 'none';
-    }
-
-    // Phone Validation (Only checks if empty)
-    if (!phone) {
-        messagePhone.textContent = '*Please enter your phone number';
-        messagePhone.style.display = 'block';
-        isValid = false;
-    } else {
-        messagePhone.style.display = 'none';
     }
 
     // Email Validation
