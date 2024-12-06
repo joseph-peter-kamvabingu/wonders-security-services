@@ -20,3 +20,19 @@ document.querySelector('form').addEventListener('submit', function (e) {
         alert('An unexpected error occurred.');
     });
 });
+
+sendBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+  
+    const phone = contactPhone.value.trim();
+  
+    if (!isPhoneNumber(phone)) {
+      messagePhone.style.display = 'block'; // Show the error message
+      messagePhone.textContent = '*Please enter a valid phone number (e.g., 0999999999)';
+    } else {
+      messagePhone.style.display = 'none'; // Hide the error message
+    }
+  
+    // Perform other validations for name, email, and message here...
+  });
+  
