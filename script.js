@@ -1,19 +1,21 @@
 document.querySelector('form').addEventListener('submit', function (e) {
     e.preventDefault();
 
+    // Input values
     const name = document.querySelector('.c-name').value.trim();
     const phone = document.querySelector('.c-phone').value.trim();
     const email = document.querySelector('.c-email').value.trim();
     const message = document.querySelector('.c-message').value.trim();
 
+    // Error messages
     const messageName = document.querySelector('.f-name');
     const messagePhone = document.querySelector('.f-phone');
     const messageEmail = document.querySelector('.f-email');
-    const submitFeedback = document.querySelector('.submit-feedback');
 
     // Validation Functions
-    const isEmail = (mail) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(mail);
-    const isName = (name) => /^[a-zA-Z\s]+$/.test(name);
+    const isEmail = (mail) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(mail); // Simple email regex
+    const isName = (name) => /^[a-zA-Z\s]+$/.test(name); // Matches letters and spaces
+    const isPhoneNumber = (number) => /^\d+$/.test(number); // Matches any numeric value
 
     let isValid = true;
 
@@ -25,10 +27,9 @@ document.querySelector('form').addEventListener('submit', function (e) {
         messageName.style.display = 'none';
     }
 
-    // Phone Validation (allows any numbers)
-    if (!phone || isNaN(phone)) {
+    // Phone Validation (Any numeric phone number)
+    if (!isPhoneNumber(phone)) {
         messagePhone.style.display = 'block';
-        messagePhone.textContent = '*Please enter a valid phone number';
         isValid = false;
     } else {
         messagePhone.style.display = 'none';
