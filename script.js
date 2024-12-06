@@ -7,15 +7,14 @@ document.querySelector('form').addEventListener('submit', function (e) {
     const email = document.querySelector('.c-email').value.trim();
     const message = document.querySelector('.c-message').value.trim();
 
-    // Error messages
+    // Error message elements
     const messageName = document.querySelector('.f-name');
     const messagePhone = document.querySelector('.f-phone');
     const messageEmail = document.querySelector('.f-email');
 
     // Validation Functions
-    const isEmail = (mail) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(mail); // Simple email regex
+    const isEmail = (mail) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(mail); // Basic email format
     const isName = (name) => /^[a-zA-Z\s]+$/.test(name); // Matches letters and spaces
-    const isPhoneNumber = (number) => /^\d+$/.test(number); // Matches any numeric value
 
     let isValid = true;
 
@@ -27,8 +26,8 @@ document.querySelector('form').addEventListener('submit', function (e) {
         messageName.style.display = 'none';
     }
 
-    // Phone Validation (Any numeric phone number)
-    if (!isPhoneNumber(phone)) {
+    // Phone Validation (No restrictions)
+    if (!phone) { // Only check if the phone field is empty
         messagePhone.style.display = 'block';
         isValid = false;
     } else {

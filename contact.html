@@ -101,36 +101,20 @@
                     </div>
                     <div class="col-1">
                         <div class="contact-form">
-                            <form action="process_form.php" method="POST" novalidate>
-                                <!-- Name Input -->
-                                <div class="form-group">
-                                    <input type="text" class="contact-input c-name" name="name" placeholder="Name (*)" required>
-                                    <div class="invalid-feedback f-name" style="display: none;">*Please, enter your name</div>
-                                </div>
-                            
-                                <!-- Phone Input -->
-                                <div class="form-group">
-                                    <input type="text" class="contact-input c-phone" name="phone" placeholder="Phone (*)" required>
-                                    <div class="invalid-feedback f-phone" style="display: none;">*Please enter a valid phone number</div>
-                                </div>
-                            
-                                <!-- Email Input -->
-                                <div class="form-group">
-                                    <input type="email" class="contact-input c-email" name="email" placeholder="E-mail (*)" required>
-                                    <div class="invalid-feedback f-email" style="display: none;">*Please, enter your E-mail</div>
-                                </div>
-                            
-                                <!-- Message Input -->
-                                <div class="form-group">
-                                    <textarea class="contact-input c-message" name="message" placeholder="Message (*)" required></textarea>
-                                    <div class="invalid-feedback f-message" style="display: none;">*Please, enter your message</div>
-                                </div>
-                            
-                                <!-- Submit Button -->
-                                <div class="form-group">
-                                    <input type="submit" class="send-btn" value="Send Message">
-                                </div>
+                            <form action="process_form.php" method="POST">
+                                <input type="text" class="contact-input c-name" name="name" placeholder="Name (*)" required>
+                                <div class="invalid-feedback f-name" style="display: none;">*Please, enter your name</div>
+                                
+                                <input type="text" class="contact-input c-phone" name="phone" placeholder="Phone (*)" required>
+                                <div class="invalid-feedback f-phone" style="display: none;">*Please enter your phone number</div>
+                                
+                                <input type="email" class="contact-input c-email" name="email" placeholder="E-mail (*)" required>
+                                <div class="invalid-feedback f-email" style="display: none;">*Please, enter your E-mail</div>
+                                
+                                <textarea class="contact-input c-message" name="message" placeholder="Message (*)" required></textarea>
+                                <input type="submit" class="send-btn" value="Send Message">
                             </form>
+                            
                             
                    
                 </div>
