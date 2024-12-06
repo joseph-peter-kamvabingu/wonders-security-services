@@ -104,13 +104,15 @@
                             <form action="process_form.php" method="POST">
                                 <input type="text" class="contact-input c-name" name="name" placeholder="Name (*)" required>
                                 <div class="invalid-feedback f-name">*Please, enter your name</div>
-                                <input type="text" class="contact-input c-phone" name="phone" placeholder="Phone (*)" required>
-                                <input type="text" class="contact-input c-phone" placeholder="Phone (*) : 0999999999" required="">
+                            
+                                <input type="text" class="contact-input c-phone" name="phone" placeholder="Phone (*) : 0999999999" required>
                                 <div class="invalid-feedback f-phone">*Please enter a valid phone number (e.g., 0999999999)</div>
-                                
+                            
                                 <input type="email" class="contact-input c-email" name="email" placeholder="E-mail (*)" required>
                                 <div class="invalid-feedback f-email">*Please, enter your E-mail</div>
+                            
                                 <textarea class="contact-input c-message" name="message" placeholder="Message (*)" required></textarea>
+                            
                                 <input type="submit" class="send-btn" value="Send Message">
                             </form>
                             
