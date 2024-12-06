@@ -13,7 +13,6 @@ document.querySelector('form').addEventListener('submit', function (e) {
 
     // Validation Functions
     const isEmail = (mail) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(mail);
-    const isPhoneNumber = (number) => /^09\d{7}$/.test(number); // Matches 099xxxxxxx
     const isName = (name) => /^[a-zA-Z\s]+$/.test(name);
 
     let isValid = true;
@@ -26,9 +25,10 @@ document.querySelector('form').addEventListener('submit', function (e) {
         messageName.style.display = 'none';
     }
 
-    // Phone Validation
-    if (!isPhoneNumber(phone)) {
+    // Phone Validation (allows any numbers)
+    if (!phone || isNaN(phone)) {
         messagePhone.style.display = 'block';
+        messagePhone.textContent = '*Please enter a valid phone number';
         isValid = false;
     } else {
         messagePhone.style.display = 'none';
