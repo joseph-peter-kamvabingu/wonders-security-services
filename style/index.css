@@ -1030,7 +1030,7 @@ footer .copy p {
 
 #training-days .section-intro {
     color: var(--app-body-text-color);
-    font-size: 1px;
+    font-size: 18px;
     text-align: center;
     margin-bottom: 40px;
 }
