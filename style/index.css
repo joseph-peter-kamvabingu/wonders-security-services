@@ -664,7 +664,7 @@ h1.h-title {
  .intros h1 {
     width: 100%;
     text-align: center;
-    font-size: 30px;
+    font-size: 25px;
     color: var(--app-title-color);
   }
 
@@ -892,7 +892,7 @@ footer .copy p {
 }
 
 #documents .section-heading {
-    font-size: 36px;
+    font-size: 4px;
     font-weight: 600;
     color: var(--app-title-color);
     margin-bottom: 20px;
@@ -945,7 +945,7 @@ footer .copy p {
 }
 
 .section-heading {
-    font-size: 48px;
+    font-size: 20px;
     font-weight: bold;
     margin-bottom: 40px;
     color: #000; /* Black heading */
@@ -979,9 +979,9 @@ footer .copy p {
 }
 
 .client-photo {
-    width: 30px; /* Smaller size */
-    height: 30px;
-    border-radius: 50%;
+    width: 25px; /* Smaller size */
+    height: 25px;
+    border-radius: 20%;
     margin-bottom: 10px;
     border: 2px solid #ddd;
 }
@@ -1035,7 +1035,7 @@ footer .copy p {
 
 #training-days h1 {
     color: var(--app-title-color);
-    font-size: 23px;
+    font-size: 19px;
     font-weight: 800;
     text-align: center;
     margin-bottom: 10px;
@@ -1043,7 +1043,7 @@ footer .copy p {
 
 #training-days .section-intro {
     color: var(--app-body-text-color);
-    font-size: 18px;
+    font-size: 15px;
     text-align: center;
     margin-bottom: 40px;
 }
@@ -1123,7 +1123,7 @@ footer .copy p {
 }
 
 #services-options h1 {
-    font-size: 2rem;
+    font-size: 1.66rem;
     color: var(--app-title-color);
     text-align: center;
     margin-bottom: 0.5rem;
