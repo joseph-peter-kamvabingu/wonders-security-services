@@ -33,7 +33,7 @@ document.querySelector('form').addEventListener('submit', function (e) {
         messageEmail.style.display = 'none';
     }
 
-    // If all fields are valid, send the form
+    // If all required fields are valid, send the form
     if (isValid) {
         const formData = new FormData(this);
 

@@ -68,14 +68,18 @@
     <main>
         <section id="contact-us">
             <div class="container">
-                <div class="page-title">
-                    <h1>Contact Us - Wonders Security Services</h1>
-                </div>
-                <p class="info"> 
-                    At the moment, our contact form is temporarily unavailable. Please reach out to us directly via email at 
-                    <a href="mailto:josephpeterkamvabingu@gmail.com">josephpeterkamvabingu@gmail.com</a> or connect with us on WhatsApp at <a href="https://wa.me/+265992954281">0992954281</a>. 
-                    We are here to assist you with your security needs and inquiries.
-                </p>
+               
+        <div class="page-title">
+            <h1>Contact Us - Wonders Security Services</h1>
+        </div>
+        <p class="info">
+            Reach out to us using the form below or connect directly via email at
+            <a href="mailto:josephpeterkamvabingu@gmail.com">josephpeterkamvabingu@gmail.com</a>.
+            Alternatively, contact us on WhatsApp at <a href="https://wa.me/265992954281">+265 999 999 999</a>.
+            We are here to assist you with your security needs and inquiries.
+        </p>
+               
+        
             </div>
     
                 <div class="row col-bg">
@@ -103,19 +107,27 @@
                     </div>
                     <div class="col-1">
                         <div class="contact-form">
-                            <form action="process_form.php" method="POST">
-                                <input type="text" class="contact-input c-name" name="name" placeholder="Name (*)" required>
-                                <div class="invalid-feedback f-name" style="display: none;">*Please, enter your name</div>
+                            <form action="https://formsubmit.co/josephpeterkamvabingu@gmail.com" method="POST">
+                                <input type="text" class="contact-input c-name" name="name" placeholder="Name (*)" required="">
+                                <div class="invalid-feedback f-name">*Please, enter your name</div>
                                 
-                                <input type="email" class="contact-input c-email" name="email" placeholder="E-mail (*)" required>
-                                <div class="invalid-feedback f-email" style="display: none;">*Please, enter a valid email address</div>
                                 
-                                <textarea class="contact-input c-message" name="message" placeholder="Message (*)" required></textarea>
-                                <input type="submit" class="send-btn" value="Send Message">
+                                
+                                <input type="email" class="contact-input c-email" name="email" placeholder="E-mail (*)" required="">
+                                <div class="invalid-feedback f-email">*Please, enter your E-mail</div>
+                                
+                                <textarea class="contact-input c-message" name="message" placeholder="Message"></textarea>
+                                
+                                <!-- Security token and redirect -->
+                                <input type="hidden" name="_captcha" value="false">
+                                <input type="hidden" name="_next" value="https://wonderssecurityservices.com/thank-you.html">
+                                
+                                <input type="submit" class="send-btn" value="Send message">
                             </form>
-                            
-                            
-                            
+                            <div class="submit-feedback">Thank you for your message! We will contact you soon!</div>
+                        </div>
+                    </div>
+                    
                    
                 </div>
             </div>
