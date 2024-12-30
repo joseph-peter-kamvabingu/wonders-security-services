@@ -52,11 +52,11 @@ function isName(name) {
   const patternName = /^[a-zA-Z]+(\s[a-zA-Z]+)*$/;
   return patternName.test(name);
 }
-
 function isPhoneNumber(number) {
-  const patternPhone = /^\d{9}$/;
+  const patternPhone = /^\d{10,15}$/; // Matches 7 to 15 digits
   return patternPhone.test(number);
 }
+
 
 sendBtn.addEventListener('click', (e) => {
   e.preventDefault();
